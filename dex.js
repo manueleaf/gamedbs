@@ -178,7 +178,8 @@ function animar() {
             const pasto = pasto1[i]
             const overlappingArea = (Math.min(player.position.x +
                 player.width, pasto.position.x + pasto.width) -
-                Math.max(player.position.x, pasto.position.x)) * (Math.min(player.position.y + player.height, pasto.position.y + pasto.height) -
+                Math.max(player.position.x, pasto.position.x)) * 
+                (Math.min(player.position.y + player.height, pasto.position.y + pasto.height) -
                     Math.max(player.position.y, pasto.position.y))
             if (rectangularCollision({
                 rectangle1: player,
