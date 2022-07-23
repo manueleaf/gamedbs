@@ -9,8 +9,10 @@ if(isset($_SESSION["useruid"])){
     <div class="wrapper">
 
         <section class="index-intro">
-            <h1>Listado de videojuegos</h1>
-            <p>En esta pagina encontrarás una compilación de diversos juegos y te seran recomendados algunos dependiendo de los titulos que poseas</p>
+            <h1>Hola</h1>
+            <p>Este es un juego web desarrollado por una sola persona
+                entrarás en un mundo en el que los enemigos dependerán del escenario donde te encuentres.
+            </p>
         </section>
 
 <?php
