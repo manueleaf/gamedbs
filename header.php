@@ -15,11 +15,10 @@ session_start();
               <ul>
                   <li><a href="index.php">Home</a></li>
                   <li><a href="info.php">Informacion</a></li>
-                  <li><a href="Games.php">Lista</a></li>
                   <?php
                    if (isset($_SESSION["useruid"])){
                        if ($_SESSION["userrolid"]==1){
-                        echo "<li><a href='profile.php'>Perfil</a></li>";
+                        echo "<li><a href='dex.html'>Jugar</a></li>";
                         echo "<li><a href='includes/logoutinc.php'>Log out</a></li>";
                     } elseif ($_SESSION["userrolid"]==2){
                         echo "<li><a href='agregar.php'>Agregar Monstruos</a></li>";

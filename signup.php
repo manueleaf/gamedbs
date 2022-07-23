@@ -6,7 +6,7 @@
 
         <section>
            <h2>Sign Up</h2>
-           <form action="/includes/signupinc.php" method="post">
+           <form action="./includes/signupinc.php" method="post">
             <input type="text" name="name" placeholder="Nombre">
             <input type="text" name="uid" placeholder="Username">
             <input type="text" name="email" placeholder="Correo">
