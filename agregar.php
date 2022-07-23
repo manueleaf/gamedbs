@@ -6,13 +6,13 @@ if(isset($_SESSION["useruid"])){
     echo "<p>Bienvenido " . $_SESSION["useruid"] . "</p>";
 }
 ?>
-    <div class="wrapper">
-
-        <section class="index-intro">
-            <h1>Listado de videojuegos</h1>
-            <p>En esta pagina encontrarás una compilación de diversos juegos y te seran recomendados algunos dependiendo de los titulos que poseas</p>
-        </section>
-
+<?php   
+   if($_SESSION["userrolid"]==2){
+    echo "<h1>aqui podra agregar monstruos al juego. </h1>";
+   } else {
+   header("location: ./index.php");
+   exit();}
+   ?>
 <?php
     include_once 'pie.php';
 ?>
