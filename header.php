@@ -7,23 +7,61 @@ session_start();
     <head>
         <meta charset="utf-8">
     </head>
-    <body>
+    <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
 
+li {
+  float: left;
+}
+
+.container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+.fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        background: #333;
+        padding: 0px 0;
+        color: #fff;
+    }
+.fixed-header{
+        top: 0;
+    }
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+</style>
+  <div class="fixed-header">
+    <div class="container">
         <nav>
-            <div class="wrapper">
-              <a href="index.php"><img src="img/logo.png"  alt="Games Info"></
               <ul>
-                  <li><a href="index.php">Home</a></li>
-                  <li><a href="info.php">Informacion</a></li>
+                  <li><a href="/root/index.php">Home</a></li>
+                  <li><a href="/root/info.php">Informacion</a></li>
                   <?php
                    if (isset($_SESSION["useruid"])){
                        if ($_SESSION["userrolid"]==1){
-                        echo "<li><a href='dex.html'>Jugar</a></li>";
+                        echo "<li><a href='/root/dex.php'>Jugar</a></li>";
                         echo "<li><a href='includes/logoutinc.php'>Log out</a></li>";
                     } elseif ($_SESSION["userrolid"]==2){
-                        echo "<li><a href='agregar.php'>Agregar Monstruos</a></li>";
-                        echo "<li><a href='dex.html'>Jugar</a></li>";
-                        echo "<li><a href='includes/logoutinc.php'>Log out</a></li>";
+                        echo "<li><a href='/root/listar.php'>Monstruos</a></li>";
+                        echo "<li><a href='/root/dex.php'>Jugar</a></li>";
+                        echo "<li><a href='/root/includes/logoutinc.php'>Log out</a></li>";
                     } 
                    } 
                    else{
@@ -32,7 +70,7 @@ session_start();
                     }
                     ?>
               </ul>
-            </div>
         </nav>
+    </div>
+  </div>
 
-    <div class="wrapper">

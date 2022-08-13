@@ -186,7 +186,7 @@ function animar() {
                 rectangle2: pasto
             }) && overlappingArea > (player.width * player.height) / 2) {
                 layer = 1
-                if (Math.random() < 0.02) {
+                if (Math.random() < 0.05) {
                     window.cancelAnimationFrame(animationId)
                     battle.initiated = true
                     gsap.to('#overlapdiv', {

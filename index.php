@@ -1,6 +1,8 @@
 <?php
     include_once 'header.php';
 ?>
+
+<link rel="stylesheet" href="mystyle.css">
 <?php
 if(isset($_SESSION["useruid"])){
     echo "<p>Bienvenido " . $_SESSION["useruid"] . "</p>";
